@@ -1,6 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import About from "../components/About";
+import Expertise from "../components/Expertise";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Newsletter from "../components/Newsletter";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -15,8 +21,22 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
+      <Hero />
 
-      {/*  */}
+      {/* About Section */}
+      <About />
+
+      {/* Expertise Section */}
+      <Expertise />
+
+      {/* Newsletter Section */}
+      <Newsletter />
+
+      {/* Project Section */}
+      <Projects />
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
