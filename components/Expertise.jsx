@@ -25,7 +25,7 @@ const Expertise = () => {
   return (
     <div className="px-6 lg:px-28 py-16">
       <h1 className="text-3xl font-bold pb-16">Expertise</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {expertiseData.map((item, index) => {
           return (
             <div
@@ -33,7 +33,7 @@ const Expertise = () => {
               className="relative w-full h-[32rem] border rounded-3xl">
               <div className="absolute h-full w-full bg-gradient-to-l from-green-200 to-pink-200 rounded-3xl"></div>
               <div className="absolute h-full w-full bg-gradient-to-b from-white via-white to-transparent rounded-3xl"></div>
-              <div className="absolute top-6 left-6">
+              <div className="absolute px-6 py-6">
                 <div className="flex flex-col space-y-2">
                   <strong className="text-xl text-gray-400">
                     {item.title}
@@ -49,7 +49,8 @@ const Expertise = () => {
                 </div>
               </div>
               <div className="absolute bottom-0 inset-x-7">
-                <Image width={380} src={item.img} height={500} />
+                <img src={item.img} alt="" className="w-full object-contain" />
+                {/* <Image width={380} src={item.img} height={500} /> */}
               </div>
             </div>
           );
