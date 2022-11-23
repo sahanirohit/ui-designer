@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBolt } from "react-icons/fa";
 
 const Newsletter = () => {
   return (
@@ -14,11 +15,12 @@ const Newsletter = () => {
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <input
             type="text"
-            className="border focus:outline-none focus:border-blue-500 px-6 rounded-full py-3"
+            className="border focus:outline-none focus:border-blue-500 px-6 rounded-full py-2"
             placeholder="What's your email?"
           />
-          <button className="bg-gradient-to-bl hover:from-yellow-400 hover:to-red-600 from-green-400 to-blue-500 rounded-full text-white px-6 py-3">
-            Subscribe
+          <button className="flex items-center justify-center space-x-2 bg-gradient-to-bl hover:from-yellow-400 hover:to-red-600 from-green-400 to-blue-500 rounded-full text-white px-6 py-2">
+            <span>Subscribe</span>
+            <FaBolt className="rotate-12" />
           </button>
         </div>
       </div>

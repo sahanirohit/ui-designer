@@ -34,7 +34,9 @@ const Header = () => {
             navOpen ? "translate-x-0" : "-translate-x-full"
           }`}>
           <ul className="flex flex-col inset-0 py-20 px-12 space-y-3 md:hidden uppercase font-[poppins] text-sm">
-            <li className=" cursor-pointer">
+            <li
+              onClick={() => setNavOpen(!navOpen)}
+              className=" cursor-pointer">
               <Link href={"/about"}>About</Link>
             </li>
             <li className="group relative cursor-pointer">
@@ -43,9 +45,15 @@ const Header = () => {
                 <FaCaretDown />
               </div>
               <ul className="bg-white absolute border z-30 px-3 hidden group-hover:block">
-                <li className="py-1">UI/UX Design</li>
-                <li className="py-1">Web Development</li>
-                <li className="py-1">App Development</li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  UI/UX Design
+                </li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  Web Development
+                </li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  App Development
+                </li>
               </ul>
             </li>
             <li className="group relative cursor-pointer">
@@ -54,9 +62,15 @@ const Header = () => {
                 <FaCaretDown />
               </div>
               <ul className="bg-white absolute border px-2 hidden group-hover:block">
-                <li className="py-1">Contact</li>
-                <li className="py-1">FAQ</li>
-                <li className="py-1">Newsletter</li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  Contact
+                </li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  FAQ
+                </li>
+                <li onClick={() => setNavOpen(!navOpen)} className="py-1">
+                  Newsletter
+                </li>
               </ul>
             </li>
             <div className="">
@@ -74,6 +88,9 @@ const Header = () => {
         </div>
         {/* Desktop Nav */}
         <ul className="space-x-10 hidden md:block uppercase font-[poppins] text-sm">
+          <li className="cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+            <Link href={"/"}>Home</Link>
+          </li>
           <li className="cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
             <Link href={"/about"}>About</Link>
           </li>
