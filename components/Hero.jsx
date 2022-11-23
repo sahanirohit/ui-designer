@@ -8,10 +8,10 @@ const Hero = () => {
         <div className="md:h-80 md:w-80 w-52 h-52 rounded-full bg-blue-500 blur-[50px] md:blur-[70px] z-10"></div>
       </div>
 
-      <h1 className="md:text-8xl text-3xl uppercase italic z-20 text-white">
+      <h1 className="md:text-7xl text-3xl uppercase italic z-20 text-white">
         Think Less,
       </h1>
-      <h1 className="md:text-8xl text-3xl uppercase z-20 text-white">
+      <h1 className="md:text-7xl text-3xl uppercase z-20 text-white">
         create more
       </h1>
     </div>

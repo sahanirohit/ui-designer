@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaCaretDown, FaWhatsapp } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
@@ -8,7 +9,13 @@ const Header = () => {
     <header className="bg-gray-100 px-6 lg:px-28 py-2">
       <nav className="bg-white py-2 z-[1] flex rounded-full items-center h-12 justify-between px-6">
         <div className="flex justify-between z-50 items-center w-full md:w-auto">
-          <img src="/images/logo.png" alt="" className="w-28 object-contain" />
+          <Link href={"/"}>
+            <img
+              src="/images/logo.png"
+              alt=""
+              className="w-28 object-contain"
+            />
+          </Link>
           {navOpen ? (
             <GrClose
               onClick={() => setNavOpen(!navOpen)}
@@ -27,7 +34,9 @@ const Header = () => {
             navOpen ? "translate-x-0" : "-translate-x-full"
           }`}>
           <ul className="flex flex-col inset-0 py-20 px-12 space-y-3 md:hidden uppercase font-[poppins] text-sm">
-            <li className=" cursor-pointer">About</li>
+            <li className=" cursor-pointer">
+              <Link href={"/about"}>About</Link>
+            </li>
             <li className="group relative cursor-pointer">
               <div className="flex items-center space-x-1">
                 <span className="">Work</span>
@@ -66,7 +75,7 @@ const Header = () => {
         {/* Desktop Nav */}
         <ul className="space-x-10 hidden md:block uppercase font-[poppins] text-sm">
           <li className="cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
-            About
+            <Link href={"/about"}>About</Link>
           </li>
           <li className="group relative cursor-pointer">
             <div className="inline-flex items-center space-x-1">

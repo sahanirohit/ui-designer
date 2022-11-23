@@ -17,9 +17,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
-      <Header />
-
       {/* Hero Section */}
       <Hero />
 
@@ -34,9 +31,6 @@ export default function Home() {
 
       {/* Project Section */}
       <Projects />
-
-      {/* Footer Section */}
-      <Footer />
     </div>
   );
 }
