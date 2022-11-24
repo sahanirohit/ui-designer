@@ -36,15 +36,20 @@ const Header = () => {
           <ul className="flex flex-col inset-0 py-20 px-12 space-y-3 md:hidden uppercase font-[poppins] text-sm">
             <li
               onClick={() => setNavOpen(!navOpen)}
+              className="cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+              <Link href={"/"}>Home</Link>
+            </li>
+            <li
+              onClick={() => setNavOpen(!navOpen)}
               className=" cursor-pointer">
               <Link href={"/about"}>About</Link>
             </li>
             <li className="group relative cursor-pointer">
               <div className="flex items-center space-x-1">
-                <span className="">Work</span>
+                <span className="">Services</span>
                 <FaCaretDown />
               </div>
-              <ul className="bg-white absolute border z-30 px-3 hidden group-hover:block">
+              <ul className="bg-white absolute w-44 border z-30 px-3 hidden group-hover:block">
                 <li onClick={() => setNavOpen(!navOpen)} className="py-1">
                   UI/UX Design
                 </li>
@@ -94,26 +99,38 @@ const Header = () => {
           <li className="cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
             <Link href={"/about"}>About</Link>
           </li>
-          <li className="group relative cursor-pointer">
+          <li className="group relative cursor-pointer hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
             <div className="inline-flex items-center space-x-1">
-              <span className="">Work</span>
+              <span className="">Services</span>
               <FaCaretDown />
             </div>
-            <ul className="bg-white absolute border px-3 hidden group-hover:block">
-              <li className="py-1">UI/UX Design</li>
-              <li className="py-1">Web Development</li>
-              <li className="py-1">App Development</li>
+            <ul className="bg-white text-black absolute w-44 border px-3 hidden group-hover:block">
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                <Link href={"/services/web-design"}>UI/UX Design</Link>
+              </li>
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                <Link href={"/services/web-development"}>Web Development</Link>
+              </li>
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                <Link href={"/services/app-development"}>App Development</Link>
+              </li>
             </ul>
           </li>
-          <li className="group relative cursor-pointer">
+          <li className="group hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500 relative cursor-pointer">
             <div className="inline-flex items-center space-x-1">
               <span className="">More</span>
               <FaCaretDown />
             </div>
-            <ul className="bg-white absolute border px-2 hidden group-hover:block">
-              <li className="py-1">Contact</li>
-              <li className="py-1">FAQ</li>
-              <li className="py-1">Newsletter</li>
+            <ul className="bg-white text-black absolute border px-2 hidden group-hover:block">
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                Contact
+              </li>
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                FAQ
+              </li>
+              <li className="py-1 hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500">
+                Newsletter
+              </li>
             </ul>
           </li>
           <a

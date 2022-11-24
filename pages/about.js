@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FcAdvertising } from "react-icons/fc";
 import { HiCurrencyDollar, HiSpeakerphone } from "react-icons/hi";
+import Contact from "../components/Contact";
 
 const digitalServices = [
   {
