@@ -1,14 +1,18 @@
+import Head from "next/head";
 import React from "react";
 import Contact from "../../components/Contact";
 
 const webDesign = () => {
   return (
     <div className="px-6 lg:px-28">
-      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[70vh]">
-        <h1 className="text-8xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+      <Head>
+        <title>Rohit Sahani | Web Design</title>
+      </Head>
+      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[92vh]">
+        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           Good design
         </h1>
-        <h1 className="text-8xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           is invisible.
         </h1>
       </div>

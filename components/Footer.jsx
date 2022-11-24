@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaHeart, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
@@ -11,24 +12,38 @@ const Footer = () => {
         </div>
         <div className="">
           <h1 className="uppercase text-xl font-semibold pb-4">Menu</h1>
-          <ul className="flex-col flex space-y-3">
-            <li className="">About</li>
-            <li className="">Newsletter</li>
-            <li className="">FAQ</li>
-            <li className="">Contact</li>
+          <ul className="flex-col flex space-y-3 font-[roboto-sans] font-semibold">
+            <li className="">
+              <Link href={"/about"}>About</Link>
+            </li>
+            <li className="">
+              <Link href={"/newsletter"}>Newsletter</Link>
+            </li>
+            <li className="">
+              <Link href={"/faq"}>FAQ</Link>
+            </li>
+            <li className="">
+              <Link href={"/contact"}>Contact</Link>
+            </li>
           </ul>
         </div>
         <div className="">
           <h1 className="uppercase text-xl font-semibold pb-4">Services</h1>
-          <ul className="flex-col flex space-y-3">
-            <li className="">UI/UX Design</li>
-            <li className="">Web Development</li>
-            <li className="">App Development</li>
+          <ul className="flex-col flex space-y-3 font-[roboto-sans] font-semibold">
+            <li className="">
+              <Link href={"/services/web-design"}>UI/UX Design</Link>
+            </li>
+            <li className="">
+              <Link href={"/services/web-development"}>Web Development</Link>
+            </li>
+            <li className="">
+              <Link href={"/services/app-development"}>App Development</Link>
+            </li>
           </ul>
         </div>
         <div className="col-span-2 sm:col-auto">
           <h1 className="uppercase text-xl font-semibold pb-4">Social Site</h1>
-          <ul className="flex-col flex space-y-3">
+          <ul className="flex-col flex space-y-3 font-[roboto-sans] font-semibold">
             <li className="">
               <a
                 href="https://www.linkedin.com/in/rohitsahani01/"
@@ -45,7 +60,7 @@ const Footer = () => {
                 className="flex items-center space-x-2"
                 rel="noopener noreferrer">
                 <FaWhatsapp />
-                <span>Web Development</span>
+                <span>Whatsapp</span>
               </a>
             </li>
             <li className="">
@@ -55,7 +70,7 @@ const Footer = () => {
                 className="flex items-center space-x-2"
                 rel="noopener noreferrer">
                 <FaInstagram />
-                <span>App Development</span>
+                <span>Instagram</span>
               </a>
             </li>
           </ul>

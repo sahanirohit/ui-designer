@@ -1,6 +1,8 @@
+import Head from "next/head";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import Contact from "../../components/Contact";
+import Packages from "../../components/Packages";
 
 const projectShowcase = [
   { img: "/images/teacher-portfolio.jpg" },
@@ -10,11 +12,14 @@ const projectShowcase = [
 const webDevelopment = () => {
   return (
     <div className="px-6 lg:px-28">
-      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[70vh]">
-        <h1 className="text-8xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+      <Head>
+        <title>Rohit Sahani | Web Development</title>
+      </Head>
+      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[92vh]">
+        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           Online Business
         </h1>
-        <h1 className="text-8xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           is the future.
         </h1>
       </div>
@@ -36,7 +41,7 @@ const webDevelopment = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projectShowcase.map((item, index) => {
             return (
-              <div className="h-96 border" key={index}>
+              <div className="h-96 border cursor-pointer" key={index}>
                 <img
                   src={item.img}
                   alt=""
@@ -47,6 +52,9 @@ const webDevelopment = () => {
           })}
         </div>
       </div>
+
+      {/* Packages */}
+      <Packages />
 
       {/* Let's discuss */}
       <Contact />
