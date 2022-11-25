@@ -5,7 +5,7 @@ import { FaHeart, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   const copyrightYear = new Date();
   return (
-    <footer className="px-6 lg:px-28 bg-red-100">
+    <footer className="px-6 lg:px-28 bg-gray-100">
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 py-8">
         <div className="lg:col-span-2 col-span-2 sm:col-auto">
           <img src="/images/logo.png" alt="" className="w-56 object-contain" />
@@ -14,16 +14,10 @@ const Footer = () => {
           <h1 className="uppercase text-xl font-semibold pb-4">Menu</h1>
           <ul className="flex-col flex space-y-3 font-[roboto-sans] font-semibold">
             <li className="">
+              <Link href={"/"}>Home</Link>
+            </li>
+            <li className="">
               <Link href={"/about"}>About</Link>
-            </li>
-            <li className="">
-              <Link href={"/newsletter"}>Newsletter</Link>
-            </li>
-            <li className="">
-              <Link href={"/faq"}>FAQ</Link>
-            </li>
-            <li className="">
-              <Link href={"/contact"}>Contact</Link>
             </li>
           </ul>
         </div>

@@ -1,24 +1,30 @@
 import Head from "next/head";
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import Contact from "../../components/Contact";
+import Newsletter from "../../components/Newsletter";
 import Packages from "../../components/Packages";
+import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 
 const projectShowcase = [
   { img: "/images/teacher-portfolio.jpg" },
   { img: "/images/Plant Shop.jpg" },
+  { img: "/images/Game Dev.jpg" },
 ];
 
 const webDevelopment = () => {
+  const { scrollYProgress } = useScroll();
+  const x = useMotionValue(0);
+  const tranform = useTransform(x, [0, 0.1], [0, 200]);
   return (
     <div className="px-6 lg:px-28">
       <Head>
         <title>Rohit Sahani | Web Development</title>
       </Head>
       <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[92vh]">
-        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+        <motion.h1
+          style={{ x: tranform }}
+          className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           Online Business
-        </h1>
+        </motion.h1>
         <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           is the future.
         </h1>
@@ -57,7 +63,7 @@ const webDevelopment = () => {
       <Packages />
 
       {/* Let's discuss */}
-      <Contact />
+      <Newsletter />
       <div className="py-8"></div>
     </div>
   );

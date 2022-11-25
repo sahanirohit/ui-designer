@@ -116,7 +116,7 @@ const Header = () => {
               </li>
             </ul>
           </li>
-          <li className="group hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500 relative cursor-pointer">
+          {/* <li className="group hover:bg-clip-text hover:bg-gradient-to-tl from-green-400 hover:text-transparent hover:to-blue-500 relative cursor-pointer">
             <div className="inline-flex items-center space-x-1">
               <span className="">More</span>
               <FaCaretDown />
@@ -132,7 +132,7 @@ const Header = () => {
                 Newsletter
               </li>
             </ul>
-          </li>
+          </li> */}
           <a
             href="http://wa.me/918957912038"
             target="_blank"
