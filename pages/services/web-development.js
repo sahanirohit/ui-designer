@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Newsletter from "../../components/Newsletter";
 import Packages from "../../components/Packages";
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const projectShowcase = [
   { img: "/images/teacher-portfolio.jpg" },
@@ -12,22 +12,24 @@ const projectShowcase = [
 
 const webDevelopment = () => {
   const { scrollYProgress } = useScroll();
-  const x = useMotionValue(0);
-  const tranform = useTransform(x, [0, 0.1], [0, 200]);
+  const left = useTransform(scrollYProgress, [0, 1], [0, -1500]);
+  const right = useTransform(scrollYProgress, [0, 1], [0, 1500]);
   return (
     <div className="px-6 lg:px-28">
       <Head>
         <title>Rohit Sahani | Web Development</title>
       </Head>
-      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[92vh]">
+      <div className="w-full items-center justify-center flex text-center flex-col space-y-2 h-[92vh] overflow-hidden">
         <motion.h1
-          style={{ x: tranform }}
-          className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+          style={{ x: left }}
+          className="md:text-9xl text-6xl duration-500 font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           Online Business
         </motion.h1>
-        <h1 className="text-9xl font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
+        <motion.h1
+          style={{ x: right }}
+          className="md:text-9xl text-6xl duration-500 font-[roboto-serif] font-black bg-clip-text bg-gradient-to-bl from-green-400 text-transparent to-blue-500">
           is the future.
-        </h1>
+        </motion.h1>
       </div>
       <div className="flex flex-col items-center justify-center text-center space-y-4">
         <h1 className="text-4xl max-w-2xl font-bold font-[roboto-serif]">

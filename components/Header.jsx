@@ -7,7 +7,7 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
     <header className="bg-gray-100 px-6 lg:px-28 py-2">
-      <nav className="bg-white py-2 z-[1] flex rounded-full items-center h-12 justify-between px-6">
+      <nav className="bg-white shadow-md py-2 z-[1] flex rounded-full items-center h-12 justify-between px-6">
         <div className="flex justify-between z-50 items-center w-full md:w-auto">
           <Link href={"/"}>
             <img
