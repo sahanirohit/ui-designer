@@ -3,7 +3,7 @@ import React from "react";
 import Contact from "../../components/Contact";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const webDesign = () => {
+const WebDesign = () => {
   const { scrollYProgress } = useScroll();
   const left = useTransform(scrollYProgress, [0, 1], [0, -1500]);
   const right = useTransform(scrollYProgress, [0, 1], [0, 1500]);
@@ -84,4 +84,4 @@ const webDesign = () => {
   );
 };
 
-export default webDesign;
+export default WebDesign;

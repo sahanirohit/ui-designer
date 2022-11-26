@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -23,7 +22,7 @@ const expertiseData = [
 
 const Expertise = () => {
   return (
-    <div className="px-6 lg:px-28 py-16">
+    <div className="px-6 lg:px-0 py-16 max-w-7xl mx-auto">
       <h1 className="text-3xl font-bold pb-16">Expertise</h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {expertiseData.map((item, index) => {
@@ -35,7 +34,7 @@ const Expertise = () => {
               <div className="absolute h-full w-full bg-gradient-to-b from-white via-white to-transparent rounded-3xl"></div>
               <div className="absolute px-6 py-6">
                 <div className="flex flex-col space-y-2">
-                  <strong className="text-xl text-gray-400">
+                  <strong className="text-xl text-gray-500">
                     {item.title}
                   </strong>
                   <h2 className="text-xl font-bold">{item.desc}</h2>

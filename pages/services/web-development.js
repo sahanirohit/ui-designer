@@ -1,8 +1,7 @@
 import Head from "next/head";
 import React from "react";
-import Newsletter from "../../components/Newsletter";
-import Packages from "../../components/Packages";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Contact from "../../components/Contact";
 
 const projectShowcase = [
   { img: "/images/teacher-portfolio.jpg" },
@@ -11,7 +10,7 @@ const projectShowcase = [
   { img: "/images/Village Bank.jpg" },
 ];
 
-const webDevelopment = () => {
+const WebDevelopment = () => {
   const { scrollYProgress } = useScroll();
   const left = useTransform(scrollYProgress, [0, 1], [0, -1500]);
   const right = useTransform(scrollYProgress, [0, 1], [0, 1500]);
@@ -50,7 +49,7 @@ const webDevelopment = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projectShowcase.map((item, index) => {
             return (
-              <div className="h-96 border cursor-pointer" key={index}>
+              <div className="h-full w-full border cursor-pointer" key={index}>
                 <img
                   src={item.img}
                   alt=""
@@ -62,14 +61,11 @@ const webDevelopment = () => {
         </div>
       </div>
 
-      {/* Packages */}
-      <Packages />
-
-      {/* Let's discuss */}
-      <Newsletter />
+      {/* CTA */}
+      <Contact />
       <div className="py-8"></div>
     </div>
   );
 };
 
-export default webDevelopment;
+export default WebDevelopment;

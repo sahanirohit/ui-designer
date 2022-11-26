@@ -5,8 +5,8 @@ import { FaHeart, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   const copyrightYear = new Date();
   return (
-    <footer className="px-6 lg:px-28 bg-gray-100">
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 py-8">
+    <footer className="px-6 lg:px-0 bg-gray-100">
+      <div className="grid max-w-7xl mx-auto grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 py-8">
         <div className="lg:col-span-2 col-span-2 sm:col-auto">
           <img src="/images/logo.png" alt="" className="w-56 object-contain" />
         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="w-full h-px bg-white"></div>
+      <div className="w-full max-w-7xl mx-auto h-px bg-white"></div>
       <div className="py-8 w-full flex sm:flex-row flex-col gap-2 sm:gap-0 items-center justify-center">
         <p className="text-sm text-center">
           &copy; {copyrightYear.getFullYear()} All rights Reserved.
@@ -78,7 +78,9 @@ const Footer = () => {
         {"  "}
         <p className="inline-flex items-center">
           <span> Made with</span> <FaHeart className="mx-2 text-red-500" /> by
-          <strong className="mx-2 underline">Rohit Sahani</strong>
+          <strong className="mx-2 underline">
+            <Link href={"/"}>Rohit Sahani</Link>
+          </strong>
         </p>
       </div>
     </footer>

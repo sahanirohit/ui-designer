@@ -3,8 +3,8 @@ import { FaBolt } from "react-icons/fa";
 
 const Newsletter = () => {
   return (
-    <div className="px-6 lg:px-28 bg-gray-100 py-16 flex items-center justify-center">
-      <div className="sm:w-[80%] min-h-[20rem] py-6 bg-white rounded-3xl shadow-sm px-6 md:px-20 flex flex-col items-center justify-center space-y-4">
+    <div className="px-6 lg:px-0 bg-gray-100  py-16 flex items-center justify-center">
+      <div className="sm:w-[80%] min-h-[20rem] max-w-7xl mx-auto py-6 bg-white rounded-3xl shadow-sm px-6 md:px-20 flex flex-col items-center justify-center space-y-4">
         <h1 className="md:text-3xl sm:text-2xl text-xl text-center font-semibold">
           Sharing my learnings on ux design, self-development & solopreneurship.
         </h1>

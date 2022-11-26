@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBolt, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (

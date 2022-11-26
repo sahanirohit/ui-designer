@@ -175,13 +175,6 @@ const Packages = () => {
                 </div>
               );
             })}
-
-            {/* <div className={`${activeTab === 2 ? "" : "hidden"}`}>
-              <h1 className="">Standard</h1>
-            </div>
-            <div className={`${activeTab === 3 ? "" : "hidden"}`}>
-              <h1 className="">Premium</h1>
-            </div> */}
           </div>
         </div>
       </div>
