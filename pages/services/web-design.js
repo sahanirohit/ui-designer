@@ -70,7 +70,7 @@ const WebDesign = () => {
           </div>
           <div className="order-1 md:order-2">
             <img
-              src="/images/design-for-people.jpg"
+              src="/images/design-for-people.webp"
               alt=""
               className="w-full h-full object-contain rounded-3xl"
             />
