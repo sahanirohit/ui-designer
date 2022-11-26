@@ -8,6 +8,7 @@ const projectShowcase = [
   { img: "/images/teacher-portfolio.jpg" },
   { img: "/images/Plant Shop.jpg" },
   { img: "/images/Game Dev.jpg" },
+  { img: "/images/Village Bank.jpg" },
 ];
 
 const webDevelopment = () => {
