@@ -8,6 +8,8 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import { HiCurrencyDollar, HiSpeakerphone } from "react-icons/hi";
+import aboutMe from "/public/images/about.png";
+import Image from "next/image";
 
 const digitalServices = [
   {
@@ -87,11 +89,9 @@ const About = () => {
               <p className="font-[Smooch] text-2xl">Rohit...</p>
             </div>
             <div className=" justify-end flex">
-              <img
-                src="/images/about.png"
-                alt=""
-                className="object-contain w-full h-96"
-              />
+              <div className="relative w-60">
+                <Image src={aboutMe} alt="me" objectFit="contain" />
+              </div>
             </div>
           </div>
         </div>

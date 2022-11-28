@@ -2,11 +2,11 @@ import Head from "next/head";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Contact from "../../components/Contact";
+import img1 from "/public/images/Frame 1.jpg";
+import img2 from "/public/images/Frame 2.jpg";
+import Image from "next/image";
 
-const projectShowcase = [
-  { img: "/images/Frame 1.jpg" },
-  { img: "/images/Frame 2.jpg" },
-];
+const projectShowcase = [{ img: img1 }, { img: img2 }];
 
 const AppDevelopment = () => {
   const { scrollYProgress } = useScroll();
@@ -47,11 +47,13 @@ const AppDevelopment = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projectShowcase.map((item, index) => {
             return (
-              <div className="h-full w-full border cursor-pointer" key={index}>
-                <img
+              <div
+                className="h-full w-full relative border cursor-pointer"
+                key={index}>
+                <Image
                   src={item.img}
-                  alt=""
-                  className="w-full h-full object-contain"
+                  alt="app-development"
+                  objectFit="contain"
                 />
               </div>
             );

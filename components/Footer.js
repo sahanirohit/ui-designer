@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaHeart, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import logo from "/public/images/logo.png";
 
 const Footer = () => {
   const copyrightYear = new Date();
@@ -8,7 +10,9 @@ const Footer = () => {
     <footer className="px-6 lg:px-0 bg-gray-100">
       <div className="grid max-w-7xl mx-auto grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0 py-8">
         <div className="lg:col-span-2 col-span-2 sm:col-auto">
-          <img src="/images/logo.png" alt="" className="w-56 object-contain" />
+          <div className="w-56 relative">
+            <Image src={logo} alt="logo" objectFit="contain" />
+          </div>
         </div>
         <div className="">
           <h1 className="uppercase text-xl font-semibold pb-4">Menu</h1>

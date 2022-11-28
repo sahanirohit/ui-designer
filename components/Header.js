@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaCaretDown, FaWhatsapp } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
+import logo from "/public/images/logo.png";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -10,11 +12,9 @@ const Header = () => {
       <nav className="bg-white shadow-md py-2 z-[1] max-w-7xl mx-auto flex rounded-full items-center h-12 justify-between px-6">
         <div className="flex justify-between z-50 items-center w-full md:w-auto">
           <Link href={"/"}>
-            <img
-              src="/images/logo.png"
-              alt=""
-              className="w-28 object-contain"
-            />
+            <div className="relative w-28">
+              <Image src={logo} alt="logo" objectFit="contain" />
+            </div>
           </Link>
           {navOpen ? (
             <GrClose

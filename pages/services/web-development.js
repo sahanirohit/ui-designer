@@ -2,12 +2,17 @@ import Head from "next/head";
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Contact from "../../components/Contact";
+import Image from "next/image";
+import img1 from "/public/images/teacher-portfolio.jpg";
+import img2 from "/public/images/Plant Shop.jpg";
+import img3 from "/public/images/Game Dev.jpg";
+import img4 from "/public/images/Village Bank.jpg";
 
 const projectShowcase = [
-  { img: "/images/teacher-portfolio.jpg" },
-  { img: "/images/Plant Shop.jpg" },
-  { img: "/images/Game Dev.jpg" },
-  { img: "/images/Village Bank.jpg" },
+  { img: img1, name: "teacher-portfolio" },
+  { img: img2, name: "Plant Shop" },
+  { img: img3, name: "Game Dev" },
+  { img: img4, name: "Village Bank" },
 ];
 
 const WebDevelopment = () => {
@@ -49,12 +54,16 @@ const WebDevelopment = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projectShowcase.map((item, index) => {
             return (
-              <div className="h-full w-full border cursor-pointer" key={index}>
-                <img
+              <div
+                className="h-full relative w-full border cursor-pointer"
+                key={index}>
+                <Image src={item.img} alt={item.name} objectFit="contain" />
+
+                {/* <img
                   src={item.img}
                   alt=""
                   className="w-full h-full object-contain"
-                />
+                /> */}
               </div>
             );
           })}

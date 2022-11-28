@@ -1,20 +1,24 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import img1 from "/public/images/ui-design.jpg";
+import img2 from "/public/images/web-development.jpg";
+import img3 from "/public/images/app-development.png";
+import Image from "next/image";
 
 const expertiseData = [
   {
-    img: "/images/ui-design.jpg",
+    img: img1,
     title: "UI/UX Design",
     desc: "I design minimal & delightful user experience.",
   },
   {
-    img: "/images/web-development.jpg",
+    img: img2,
     title: "Web Development",
     desc: "I design minimal & lightspeed web application for rich user experience.",
   },
   {
-    img: "/images/app-development.png",
+    img: img3,
     title: "App Development",
     desc: "I design awesome modern UI Design for application.",
   },
@@ -48,8 +52,13 @@ const Expertise = () => {
                 </div>
               </div>
               <div className="absolute bottom-0 inset-x-7">
-                <img src={item.img} alt="" className="w-full object-contain" />
-                {/* <Image width={380} src={item.img} height={500} /> */}
+                <div className="relative">
+                  <Image
+                    src={item.img}
+                    alt={"project" + index}
+                    objectFit="fill"
+                  />
+                </div>
               </div>
             </div>
           );

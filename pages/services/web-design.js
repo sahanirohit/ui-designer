@@ -3,6 +3,10 @@ import React from "react";
 import Contact from "../../components/Contact";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import greatDesign from "/public/images/great-design.jpg";
+import designForPeople from "/public/images/design-for-people.webp";
+import Image from "next/image";
+
 const WebDesign = () => {
   const { scrollYProgress } = useScroll();
   const left = useTransform(scrollYProgress, [0, 1], [0, -1500]);
@@ -41,11 +45,7 @@ const WebDesign = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="">
-            <img
-              src="/images/great-design.jpg"
-              alt=""
-              className="w-full h-full object-contain rounded-3xl"
-            />
+            <Image src={greatDesign} alt="great-design" objectFit="contain" />
           </div>
 
           <div className="flex flex-col justify-center">
@@ -69,10 +69,10 @@ const WebDesign = () => {
             </p>
           </div>
           <div className="order-1 md:order-2">
-            <img
-              src="/images/design-for-people.webp"
-              alt=""
-              className="w-full h-full object-contain rounded-3xl"
+            <Image
+              src={designForPeople}
+              alt="design-for-people"
+              objectFit="contain"
             />
           </div>
         </div>

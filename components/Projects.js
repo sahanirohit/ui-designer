@@ -1,18 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import img1 from "/public/images/Clean UI.jpg";
+import img2 from "/public/images/Pacifico Clone.jpg";
+import img3 from "/public/images/Portfolio-Website.jpg";
+import Image from "next/image";
 
 const projectData = [
   {
-    img: "/images/Clean UI.jpg",
+    img: img1,
     title: "Clean UI - Portfolio Website",
   },
   {
-    img: "/images/Pacifico Clone.jpg",
+    img: img2,
     title: "Pacifico - Startup Website",
   },
   {
-    img: "/images/Portfolio-Website.jpg",
+    img: img3,
     title: "UI/UX - Portfolio Website",
   },
 ];
@@ -37,11 +41,13 @@ const Projects = () => {
                   </Link>
                 </div>
                 <div className="w-full flex-1 px-0">
-                  <img
-                    src={item.img}
-                    alt="project"
-                    className="object-cover w-full h-full p-2"
-                  />
+                  <div className="relative">
+                    <Image
+                      src={item.img}
+                      alt={"project" + index}
+                      objectFit="contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
